@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/*This place is reserved for comments*/
+/**
+ * main -Starting point of the program
+ * Description: main -Prints out a string to stdout
+ * Return: 0 if success
+ */
 /* betty style doc for function main goes there */
 int main(void)
 {
