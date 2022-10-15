@@ -1,16 +1,16 @@
 #include <stdio.h>
 /**
- * main -Starting point of the program
+ * main - Prints the alphabet in lowercase.
  * Description: main -Prints out a string to stdout
- * Return: 0 if success
+ * Return: Always 0.
  */
-/* betty style doc for function main goes there */
-int main(void)
-{
-int ch;
-for (ch = 'a'; ch <= 'z'; ch++)
-	putchar(ch);
-	putchar('\n');
 
+int main(void)
+
+{
+char letter;
+for (letter = 'a'; letter <= 'z'; letter++)
+putchar(letter);
+putchar('\n');
 return (0);
 }
