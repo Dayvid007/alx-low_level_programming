@@ -1,30 +1,49 @@
 #include "main.h"
+#include <stdio.h>
 /**
  *  times_table - prints every minute of the d
  *
  */
+void times_table(void);
+int main(void)
+{
+	times_table();
+}
+
 void times_table(void)
 {
-	int num1, num2, prod;
+	int num1 = 0;
+	int num2;
+	int prod;
 
-	for (num1 = 0; num1 <= 9; ++num1)
-
+	while (num1 < 10)
 	{
-		_putchar(48);
-
-		for (num2 = 0; num2 <= 9; ++num2)
+		num2 = 0;
+		while (num2 < 10)
 		{
-			_putchar(',');
-			_putchar(' ');
-
-			prod = num1 * num2;
-			if (prod <= 9)
-			_putchar(' ');
-			else
-			_putchar((prod / 10) + 48);
-			_putchar((prod / 10) + 48);
+		n = num1 * num2;
+		if (n > 9)
+		{
+			_putchar(n / 10 + '0');
+			_putchar(n % 10 + '0');
 		}
-		_putchar('\n');
+		else if (num2 != 0)
+		{
+		_putchar(' ');
+		_putchar(n + '0');
+		}
+		else
+		{
+		_putchar(n + '0');
+		}
+		if (num2 != 9)
+		{
+		_putchar(',');
+		_putchar(' ');
+		}
+		num2++;
+		}
+	_putchar('\n');
+	row++;
 	}
-
 }
