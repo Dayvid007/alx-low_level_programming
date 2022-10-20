@@ -14,7 +14,7 @@ void times_table(void)
 {
 	int num1 = 0;
 	int num2;
-	int prod;
+	int n;
 
 	while (num1 < 10)
 	{
@@ -44,6 +44,6 @@ void times_table(void)
 		num2++;
 		}
 	_putchar('\n');
-	row++;
+	num1++;
 	}
 }
