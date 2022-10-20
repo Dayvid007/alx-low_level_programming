@@ -4,11 +4,6 @@
  *  times_table - prints every minute of the d
  *
  */
-void times_table(void);
-int main(void)
-{
-	times_table();
-}
 
 void times_table(void)
 {
