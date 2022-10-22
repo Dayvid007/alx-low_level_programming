@@ -2,7 +2,7 @@
 
 /**
  *print_diagonal - draws a diagonal linein the terminal
- *@c: number of time charcter '_'should be printed
+ *@c: number of time charcter '\'should be printed
  */
 void print_diagonal(int c)
 {
@@ -13,7 +13,7 @@ void print_diagonal(int c)
 	else
 	{
 		int n, m;
-	for (n = 1; n < c; n++)
+	for (n = 0; n < c; n++)
 		{
 	for (m = 0; m < c; m++)
 	{
