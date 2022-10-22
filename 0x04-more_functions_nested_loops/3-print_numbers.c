@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  *print_numbers - function that prints numbers 1 to 9
  * Return: 0 as success
