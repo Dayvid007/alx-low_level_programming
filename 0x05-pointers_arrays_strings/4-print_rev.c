@@ -19,5 +19,5 @@ for (index = len; index > 0; index--)
 _putchar(*s);
 s--;
 }
-putchar('\n');
+_putchar('\n');
 }
