@@ -9,8 +9,8 @@ int len = 0, index;
 
 while (*s != '\0')
 {
-len++
-s++
+len++;
+s++;
 }
 s--;
 
