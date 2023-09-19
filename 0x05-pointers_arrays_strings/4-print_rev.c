@@ -16,7 +16,7 @@ s--;
 
 for (index = len; index > 0; index--)
 {
-putchar(*s);
+_putchar(*s);
 s--;
 }
 putchar('\n');
