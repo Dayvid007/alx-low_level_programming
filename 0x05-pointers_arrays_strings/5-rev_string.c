@@ -26,4 +26,5 @@ for (index = len; index > 0; index--)
 _putchar(*s);
 s--;
 }
+_putchar('\n');
 }
