@@ -26,7 +26,7 @@ int is_prime_number(int n)
 
 int final_prime(int n, int k)
 {
-	if (i == 1)
+	if (k == 1)
 	{
 		return (1);
 	}
@@ -34,7 +34,7 @@ int final_prime(int n, int k)
 	{
 		return (0);
 	}
-	return (actual_prime(n, k - 1));
+	return (final_prime(n, k - 1));
 	if (k == 1)
 	{
 		return (1);
