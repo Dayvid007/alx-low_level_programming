@@ -42,5 +42,5 @@ int final_sqrt_recursion(int n, int k)
 	{
 		return (k);
 	}
-	return (actual_sqrt_recursion(n, k + 1));
+	return (final_sqrt_recursion(n, k + 1));
 }
