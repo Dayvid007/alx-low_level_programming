@@ -20,15 +20,20 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (ptr == NULL)
 		return (malloc(new_size));
 	if (new_size == 0 && ptr != NULL)
+	{
 		free(ptr);
 		return (NULL);
+	}
 	pointer1 = malloc(new_size);
 	if (pointer1 == NULL)
 		return (NULL);
+
 	old_ptr = ptr;
-	if (new_size < old _size)
+	if (new_size < old_size)
+	{
 		for (i = 0; i < new_size; i++)
 			old_ptr[i] = pointer1[i];
+	}
 	if (new_size > old_size)
 	{
 		for (i = 0; i < old_size; i++)
