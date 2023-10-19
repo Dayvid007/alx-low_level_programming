@@ -1,6 +1,5 @@
-#include "lists.h"
 #include <stdio.h>
-#include <stdlib.h>
+#include "lists.h"
 /**
  * print_list - The function that prints the structures
  * @h: The prinf function
@@ -8,7 +7,7 @@
  */
 size_t print_list(const list_t *h)
 {
-	size_t count = 0;
+	int count = 0;
 
 	while (h)
 	{
