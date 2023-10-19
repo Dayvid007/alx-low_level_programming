@@ -1,4 +1,6 @@
 #include "lists.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * print_list - The function that prints the structures
  * @h: The prinf function
