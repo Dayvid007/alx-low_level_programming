@@ -1,6 +1,4 @@
-#include <stdio.h>
 #include "lists.h"
-#include <stdlib.h>
 /**
  * print_listint - The function that prints the elements
  * @h: The pointer to the function h
