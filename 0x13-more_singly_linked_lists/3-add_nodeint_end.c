@@ -7,8 +7,8 @@
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	listint_t endall;
-	listint_t brave = *head;
+	listint_t *endall;
+	listint_t *brave = *head;
 
 	endall = malloc(sizeof(listint_t));
 	if (endall == NULL)
