@@ -4,7 +4,7 @@
  * @head: The pointer to the param head
  * Return: The value of the node.
  */
-void free_listint2(listint_t *head)
+void free_listint2(listint_t **head)
 {
 	listint_t *pointerf;
 
