@@ -11,10 +11,10 @@
 unsigned long int _pow(unsigned int base, unsigned int power)
 {
 	unsigned long int number;
-	unsigned int long;
+	unsigned int bro;
 
 	number = 1;
-	for (long = 1; long <= power; long++)
+	for (bro = 1; bro <= power; bro++)
 	{
 		number *= base;
 	}
