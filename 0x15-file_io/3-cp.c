@@ -1,7 +1,3 @@
-#include "main.h"
-
-/**
- * error_file - checks if files can be opened.
  * @file_from: file_from.
  * @file_to: file_to.
  * @argv: arguments vector.
@@ -56,15 +52,15 @@ int main(int argc, char *argv[])
 			error_file(0, -1, argv);
 	}
 
-	error_close = close(file_what);
-	if (error_close == -1)
+	error_close_marking = close(file_what);
+	if (error_close_marking == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_what);
 		exit(100);
 	}
 
-	error_close = close(file_who);
-	if (error_close == -1)
+	error_close_marking = close(file_who);
+	if (error_close_marking == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_what);
 		exit(100);
