@@ -1,3 +1,7 @@
+#include "main.h"
+
+/**
+ * error_file - checks if files can be opened.
  * @file_from: file_from.
  * @file_to: file_to.
  * @argv: arguments vector.
@@ -27,42 +31,42 @@ void error_file(int file_from, int file_to, char *argv[])
 
 int main(int argc, char *argv[])
 {
-	int file_what, file_who, error_close_marking;
+	int file_from, file_to, error_close;
 	ssize_t newcharacter, readsswrite;
 	char buffer[1024];
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_what file_who");
+		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
 		exit(97);
 	}
 
-	file_what = open(argv[1], O_RDONLY);
-	file_who = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
-	error_file(file_what, file_who, argv);
+	file_from = open(argv[1], O_RDONLY);
+	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
+	error_file(file_from, file_to, argv);
 
 	newcharacter = 1024;
 	while (newcharacter == 1024)
 	{
-		newcharacter = read(file_what, buffer, 1024);
+		newcharacter = read(file_from, buffer, 1024);
 		if (newcharacter == -1)
 			error_file(-1, 0, argv);
-		readsswrite = write(file_who, buffer, newcharacter);
+		readsswrite = write(file_to, buffer, newcharacter);
 		if (readsswrite == -1)
 			error_file(0, -1, argv);
 	}
 
-	error_close_marking = close(file_what);
-	if (error_close_marking == -1)
+	error_close = close(file_from);
+	if (error_close == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_what);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		exit(100);
 	}
 
-	error_close_marking = close(file_who);
-	if (error_close_marking == -1)
+	error_close = close(file_to);
+	if (error_close == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_what);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		exit(100);
 	}
 	return (0);
